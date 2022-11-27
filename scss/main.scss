@@ -1,0 +1,125 @@
+
+$foreground-color: #DAD4E3;
+$section-header-bg: #7776BC;
+$text-field-bg: #A29FD1;
+$text-field-lighter:#CDC7E5;
+
+
+
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    p {
+        margin: 0;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $foreground-color;
+    @include flex(row, flex-start, center);
+
+}
+
+#root {
+    width: 80%;
+}
+
+#wrapper {
+    width: 100%;
+
+    @include flex(column, center, flex-start);
+    gap: .5rem;
+
+    margin-top: 1rem;
+    
+    /* editor section */
+    &>:first-child {
+        width: 80%;
+    }
+    /* preview section */
+    &>:last-child {
+        width: 100%;
+    }
+    section {
+        .minimize {
+            display: none;
+        }
+    }
+}
+section {
+    /* section label */
+    &>:first-child {
+        @include flex(row, center, space-between);
+
+        background-color: $section-header-bg;
+        padding: .2rem 1rem;
+        border-radius: .5rem .5rem 0 0;
+    }
+    /* section text area */
+    &>:last-child {
+        background-color: $text-field-bg;
+        width: 100%;
+        
+    }
+}
+
+#editor {
+    height: 10rem;
+    padding: .5rem 1rem;
+}
+#preview {
+    min-height: 20rem;
+    padding: 1rem 1.5rem;
+    &>:not(:last-child) {
+        margin-top: 1rem;
+    }
+    ul {
+        margin-left: 1rem;
+    }
+    blockquote {
+        font-style: italic;
+    }
+    code {
+        background-color: $text-field-lighter;
+        padding: .1rem .3rem;
+
+    }
+    pre {
+        background-color: $text-field-lighter;
+        padding: .5rem;
+        width: 100%;
+        overflow-x: scroll;
+
+    }
+     
+    strong {
+        font-weight: 900;
+    }
+    a {
+        
+    }
+    img {
+        width: 100%;
+    }
+}
+
+button {
+    border: none;
+    background-color: $section-header-bg;
+    padding: .1rem;
+    border-radius: 3px;
+    
+    &:hover {
+        border: .1rem solid black;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "02_markdown-previewer",
+  "version": "1.0.0",
+  "description": "This is 1 of 5 certification projects from [freeCodeCamp](https://www.freecodecamp.org/) [\"Front End Development Libraries\"](https://www.freecodecamp.org/learn/front-end-development-libraries/) course. \r Use Bootstrap, jQuery, Sass, React, and Redux to build 5 projects that will test everything you've learned up to this point.\r Complete all 5 projects, and you'll earn the Front End Development Libraries certification.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DaiiusMI",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
